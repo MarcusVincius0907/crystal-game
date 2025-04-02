@@ -27,9 +27,9 @@ services:
     networks:
       - crystal-network
 
-  mongodb:
+  mongodb-crystal:
     image: mongo
-    container_name: mongodb
+    container_name: mongodb-crystal
     ports:
       - "27019:27017"
     networks:
