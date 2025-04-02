@@ -12,7 +12,13 @@ import { WebSocketServer } from "@nestjs/websockets";
 import { Server, Socket } from "socket.io";
 import { MatchService } from "src/modules/match/match.service";
 
-@WebSocketGateway(3005, { transports: ["websocket"] })
+@WebSocketGateway(3005, {
+  transports: ["websocket"],
+  cors: {
+    origin: "https://crystal-game.marcusleitedev.com",
+    credentials: true,
+  },
+})
 export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   constructor(private readonly matchService: MatchService) {}
 
