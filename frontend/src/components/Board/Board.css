@@ -1,0 +1,13 @@
+.gradient-bg { background: #927FBF }
+
+.my-class {
+    -webkit-animation:name 7s infinite;
+}
+
+@keyframes name {
+    0% {color:#706195;}
+    25% {color:#bea4ff;}
+    50%{color:white}
+    75% {color:#bea4ff;}
+    100% {color:#706195;}
+}

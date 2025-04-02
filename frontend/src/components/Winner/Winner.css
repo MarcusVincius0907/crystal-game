@@ -1,0 +1,8 @@
+.custom-shadow {
+    box-shadow: 1px 1px 48px #ffffff;
+    animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+    50% {box-shadow: 1px 1px 20px #ffffff}
+}
