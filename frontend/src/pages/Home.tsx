@@ -74,7 +74,7 @@ export function Home() {
 
  
   return (
-    <>
+    <div className="min-w-[1000px] overflow-auto h-full">
       <div className="w-full sticky top-0"> 
         <Header />
       </div>
@@ -85,7 +85,7 @@ export function Home() {
 
         { match && 
         
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center ">
           {
             match?.panels.map((panel: any, index: number) => (
               <div key={index} className={`mt-2.5 flex flex-col items-center p-3 w-full ${ isActive(index) ? 'bg-[#4d5675]' : '' } `}>
@@ -107,6 +107,6 @@ export function Home() {
       <Toaster />
       { winner && <Winner />}
       
-    </>
+    </div>
   )
 }

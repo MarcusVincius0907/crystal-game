@@ -2,10 +2,6 @@ import { NestFactory } from "@nestjs/core";
 import { AppModule } from "./app.module";
 import * as cors from "cors";
 import { IoAdapter } from "@nestjs/platform-socket.io";
-import { config } from "dotenv";
-
-// Load environment variables from .env file
-config();
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
